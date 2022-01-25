@@ -10,10 +10,13 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pytest = "^6.2.5"
+latest = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
 black = "^21.10b0"
+pytest = "^6.2.5"
 
 [tool.poetry.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
