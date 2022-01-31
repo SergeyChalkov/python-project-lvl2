@@ -27,7 +27,7 @@ def generate_diff(old_file: dict, new_file: dict) -> str:
         diff.append((_add + str(key), value))
     diff.sort(key=lambda x: x[0][2:])
     diff_dict = {key: value for key, value in diff}
-    return json.dumps(diff_dict, indent=2).replace('"', '')
+    return json.dumps(diff_dict, indent=2).replace('"', '').replace(',', '')
 
 
 def files_to_data(file_one, file_two):
