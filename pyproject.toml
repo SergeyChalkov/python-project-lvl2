@@ -12,10 +12,10 @@ packages = [
 python = "^3.8"
 pytest = "^6.2.5"
 latest = "^0.6.0"
+PyYAML = "^6.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
-black = "^21.10b0"
 pytest = "^6.2.5"
 
 [tool.poetry.scripts]
