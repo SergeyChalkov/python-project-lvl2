@@ -3,7 +3,7 @@ import pytest
 from pathlib import Path
 
 
-fixtures_dir = Path('tests/fixtures').resolve()
+fixtures_dir = Path('tests/fixtures')
 
 
 @pytest.fixture(scope='session')
