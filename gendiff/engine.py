@@ -32,6 +32,4 @@ def generate_diff(old_file: dict, new_file: dict) -> str:
 
 def files_to_data(file_one, file_two):
     with open(file_one) as f1, open(file_two) as f2:
-        old_file = json.load(f1)
-        new_file = json.load(f2)
-    return old_file, new_file
+        return json.load(f1), json.load(f2)
