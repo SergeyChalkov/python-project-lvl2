@@ -1,4 +1,5 @@
 import json
+import yaml
 
 
 _rem = '- '
@@ -32,4 +33,5 @@ def generate_diff(old_file: dict, new_file: dict) -> str:
 
 def files_to_data(file_one, file_two):
     with open(file_one) as f1, open(file_two) as f2:
-        return json.load(f1), json.load(f2)
+        return yaml.safe_load(f1), yaml.safe_load(f2)
+        # return json.load(f1), json.load(f2)

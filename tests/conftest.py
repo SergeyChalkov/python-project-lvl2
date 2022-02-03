@@ -7,16 +7,20 @@ from pathlib import Path
 fixtures_dir = Path('tests/fixtures')
 
 
-@pytest.fixture(params=[json.load, yaml.safe_load])
+@pytest.fixture(params=[
+    ('j_first_flat', json.load), ('y_first_flat', yaml.safe_load)
+])
 def flat_one(request):
-    with (fixtures_dir / 'first_flat.json').open() as file:
-        return request.param(file)
+    with (fixtures_dir / request.param[0]).open() as file:
+        return request.param[1](file)
 
 
-@pytest.fixture(params=[json.load, yaml.safe_load])
+@pytest.fixture(params=[
+    ('j_second_flat', json.load), ('y_second_flat', yaml.safe_load)
+])
 def flat_two(request):
-    with (fixtures_dir / 'second_flat.json').open() as file:
-        return request.param(file)
+    with (fixtures_dir / request.param[0]).open() as file:
+        return request.param[1](file)
 
 
 @pytest.fixture(scope='session')
