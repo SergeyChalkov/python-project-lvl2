@@ -3,3 +3,6 @@
 
 ### CodeClimate quality
 [![Maintainability](https://api.codeclimate.com/v1/badges/87a522617fb8c519ebfb/maintainability)](https://codeclimate.com/github/SergeyChalkov/python-project-lvl2/maintainability)
+
+[![asciicast](https://asciinema.org/a/467030.svg)](https://asciinema.org/a/467030)
+
