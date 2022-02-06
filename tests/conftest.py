@@ -8,7 +8,7 @@ fixtures_dir = Path('tests/fixtures')
 
 
 @pytest.fixture(params=[
-    ('j_first_flat', json.load), ('y_first_flat', yaml.safe_load)
+    ('j_first_flat.json', json.load), ('y_first_flat.yaml', yaml.safe_load)
 ])
 def flat_one(request):
     with (fixtures_dir / request.param[0]).open() as file:
@@ -16,7 +16,7 @@ def flat_one(request):
 
 
 @pytest.fixture(params=[
-    ('j_second_flat', json.load), ('y_second_flat', yaml.safe_load)
+    ('j_second_flat.json', json.load), ('y_second_flat.yaml', yaml.safe_load)
 ])
 def flat_two(request):
     with (fixtures_dir / request.param[0]).open() as file:
